@@ -1,0 +1,138 @@
+.Ficha{
+    padding-top:30px ;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+.Ficha .tamaño {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 40vh;
+    width: 80%;
+}
+.carta {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+.carta:hover{
+    height: 450px;
+}
+
+.imgbx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: .5s;
+}
+.imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carta:hover .imgbx {
+    width: 250px;
+    height:250px;
+}
+.carta .contenido {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.carta .contenido .details{
+    padding: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    transition: .5s;
+    transform: translateY(150px);
+}
+.carta:hover .contenido .details {
+    transform: translate(0);
+}
+.carta .contenido .details h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color:#111;
+    line-height: 1.2em;
+}
+.carta .contenido .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    /* opacity: 0.5; */
+}
+.carta .contenido .details .data {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.carta .contenido .details .data h3 {
+    font-size: 1em;
+    color:#111;
+    line-height: 1.2em;
+    font-weight: 400;
+    /* opacity: 0.5; */
+}
+.carta .contenido .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+
+
+@media screen and (min-width:769px) {
+    .Ficha {
+        min-height: 150vh;
+    }
+    .Ficha .tamaño {
+        justify-content: center;
+        gap: 10em;
+        padding-bottom: 30px;
+    }
+    
+}
+
+@media screen and (min-width:320px) and (max-width: 768px) {
+    .Ficha {
+        min-height: 280vh;
+    }
+    .Ficha .tamaño {
+        justify-content: center;
+        gap: 10em;
+        padding-bottom: 30px;
+    }
+    .carta{
+        height: 450px;
+    }
+    .carta .imgbx {
+        width: 250px;
+        height:250px;
+    }
+    .carta .contenido .details {
+        transform: translate(0);
+    }
+
+}
